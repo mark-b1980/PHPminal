@@ -12,3 +12,4 @@ cp phpminal.php ready2upload/t.phar
 cp phpminal.php ready2upload/t.phpt
 cp phpminal.php ready2upload/t.phps
 cp phpminal.php ready2upload/t.jpg.php
+cp phpminal.php ready2upload/t.php.jpg
