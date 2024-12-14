@@ -17,7 +17,7 @@ function run_cmd($cmd){
 echo '<!DOCTYPE html>
 <html>
 <head>
-    <title>PHPminal v1.0</title>
+    <title>PHPminal v1.0.2</title>
     <style>
         *{ margin: 0px; padding: 0px; }
         body{ color: #BBB; background-color: #111; font-family: "Courier New", Courier, monospace; }
